@@ -1,0 +1,19 @@
+ #find common elements between two integer arrays
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr1={2,10,6,3,5};
+        int[] arr2={4,7,9,6,2,10};
+        Set<Integer> set=new HashSet<>();
+        for(int num:arr1){
+            set.add(num);
+        }
+        List<Integer> celement=new ArrayList<>();
+        for(int num:arr2){
+            if(set.contains(num)){
+                celement.add(num);
+            }
+        }
+        System.out.println(celement);
+    }
+}
